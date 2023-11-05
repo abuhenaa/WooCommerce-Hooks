@@ -1,0 +1,8 @@
+<?php
+//Change the total products and columns in related products section
+add_filter( 'woocommerce_output_related_products_args', 'ah_related_products', 30 );
+  function ah_related_products( $args ) {
+	$args['posts_per_page'] = 4; // 4 related products
+	$args['columns'] = 4; // arranged in 2 columns
+	return $args;
+}
